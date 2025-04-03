@@ -1,0 +1,71 @@
+1. Effect of Increasing C on Model Accuracy
+
+Low C (e.g., 0.01, 0.1):
+
+Increases regularization → wider margin, simpler decision boundary.
+
+Result: Lower training accuracy but better generalization (reduces overfitting).
+
+Risk: May underfit if data is complex.
+
+
+High C (e.g., 10, 30):
+
+Reduces regularization → narrower margin, complex boundary.
+
+Result: Higher training accuracy but risks overfitting (poor generalization).
+
+
+Optimal C: Found via cross-validation; C=1 is a common default.
+
+Note- C controls the trade-off between margin width and classification errors.
+
+
+
+2. RBF Kernel vs. Linear Kernel Performance
+
+Linear Kernel:
+
+Works for linearly separable data.
+
+Pros: Fast, interpretable.
+
+Cons: Fails on complex/nonlinear data.
+
+
+RBF Kernel:
+
+Handles nonlinear decision boundaries.
+
+Pros: Higher accuracy for complex datasets (e.g., Forest Cover).
+
+Cons: Slower, sensitive to gamma and C.
+
+
+Why RBF Often Wins?
+
+Real-world data (like Forest Cover) is rarely linear → RBF captures nonlinear patterns better
+
+
+
+
+3. Impact of Gamma (γ) in RBF Kernel
+
+Small Gamma (e.g., 0.01):
+
+Far points influence predictions → smoother boundary.
+
+Risk: Underfitting (high bias).
+
+
+Moderate Gamma (e.g., 0.1):
+
+Balanced model → good generalization.
+
+
+Large Gamma (e.g., 1+):
+
+Only nearby points matter → spiky, complex boundary.
+
+Risk: Overfitting (high variance).
+
